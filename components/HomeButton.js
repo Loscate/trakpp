@@ -1,17 +1,30 @@
 import React from "react";
-import { StyleSheet, Text, ImageBackground, Image, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  ImageBackground,
+  Image,
+  View,
+  TouchableOpacity,
+} from "react-native";
 
 export default function HomeButton(props) {
   return (
-    <ImageBackground
-      source={props.image}
-      style={styles.image}
-      imageStyle={{ borderRadius: 20 }}
+    <TouchableOpacity
+      onPress={() => {
+        props.navigation.navigate(props.link);
+      }}
     >
-      <View style={styles.view}>
-        <Text style={styles.text}>{props.title}</Text>
-      </View>
-    </ImageBackground>
+      <ImageBackground
+        source={props.image}
+        style={styles.image}
+        imageStyle={{ borderRadius: 20 }}
+      >
+        <View style={styles.view}>
+          <Text style={styles.text}>{props.title}</Text>
+        </View>
+      </ImageBackground>
+    </TouchableOpacity>
   );
 }
 const styles = StyleSheet.create({

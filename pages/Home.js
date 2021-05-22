@@ -7,26 +7,36 @@ const buttons = [
   {
     title: "Carte",
     image: require("../assets/map.png"),
+    link: "Map",
   },
   {
     title: "Checklist",
     image: require("../assets/map.png"),
+    link: "Map",
   },
   {
     title: "Galerie",
     image: require("../assets/map.png"),
+    link: "Map",
   },
   {
     title: "Photo",
     image: require("../assets/map.png"),
+    link: "Map",
   },
 ];
 
-export default function Home() {
+export default function Home(props) {
   return (
     <View style={styles.container}>
       {buttons.map((button, index) => (
-        <HomeButton title={button.title} image={button.image} key={index} />
+        <HomeButton
+          title={button.title}
+          image={button.image}
+          key={index}
+          navigation={props.navigation}
+          link={button.link}
+        />
       ))}
       <StatusBar style="auto" />
     </View>

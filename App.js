@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./pages/Home";
+import MapPage from "./pages/MapPage";
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,11 @@ export default function App() {
           name="Home"
           component={Home}
           options={{ title: "Trakpp" }}
+        />
+        <Stack.Screen
+          name="Map"
+          component={MapPage}
+          options={{ title: "Map" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
