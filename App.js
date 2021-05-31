@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./pages/Home";
 import MapPage from "./pages/MapPage";
+import ChecklistPage from "./pages/ChecklistPage";
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,11 @@ export default function App() {
           name="Map"
           component={MapPage}
           options={{ title: "Map" }}
+        />
+        <Stack.Screen
+          name="Checklist"
+          component={ChecklistPage}
+          options={{ title: "Checklist" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

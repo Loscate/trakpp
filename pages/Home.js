@@ -12,7 +12,7 @@ const buttons = [
   {
     title: "Checklist",
     image: require("../assets/map.png"),
-    link: "Map",
+    link: "Checklist",
   },
   {
     title: "Galerie",
